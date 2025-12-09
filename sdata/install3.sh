@@ -84,6 +84,9 @@ sudo systemctl disable --now dhcpcd
 sudo systemctl enable NetworkManager
 sudo systemctl restart NetworkManager
 
+# Overclock pi 4
+sudo cp $DOTFILES_DIR/.boot/config.txt /boot/config.txt
+
 # Finish up
 cd $DOTFILES_DIR
 ./sdata/finish.sh --full
