@@ -76,6 +76,14 @@ echo "" && echo -e "\e[94mEnabling greetd...\e[0m"
 sudo systemctl enable greetd.service
 sleep 1 && echo -e "\e[92mDone!\e[0m"
 
+# Install networkmanager and disable iwd/dhcpcd
+sudo pacman -S networkmanager
+
+sudo systemctl disable --now iwd
+sudo systemctl disable --now dhcpcd
+sudo systemctl enable NetworkManager
+sudo systemctl restart NetworkManager
+
 # Finish up
 cd $DOTFILES_DIR
 ./sdata/finish.sh --full
