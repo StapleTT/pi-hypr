@@ -23,7 +23,7 @@ sleep 1 && echo -e "\e[92mDone!\e[0m"
 
 echo "" && echo -e "\e[94mInstalling packages...\e[0m"
 # Install packages
-sudo pacman -S neovim grimshot fastfetch foot keyd fish curl git -y
+sudo pacman -S neovim gcc grimshot fastfetch foot keyd fish curl git -y
 
 # Install Rust via rustup if not already installed
 echo "" && echo -e "\e[94mInstalling Rust...\e[0m"
